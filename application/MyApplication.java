@@ -1,5 +1,3 @@
-package com.apping.baisu.demo.application;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Application;
@@ -7,6 +5,7 @@ import android.content.Context;
 
 import com.apping.baisu.demo.activity.BaseActivity;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -16,6 +15,12 @@ public class MyApplication extends Application {
 
     private static Stack<BaseActivity> activityStack;
     private static MyApplication instance;
+
+    // 通过Application传递数据
+    public HashMap<String, Object> mParam;
+
+    // Application数据缓存
+    public HashMap<String, Object> mCache;
 
     private MyApplication() {
 
